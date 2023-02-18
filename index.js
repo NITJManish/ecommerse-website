@@ -1,7 +1,7 @@
 const express = require('express');
 const dotenv =require("dotenv");
 const app = express();
-const PORT=process.env.port || 8000;
+const PORT=process.env.port || 5000;
 const db = require('./config/mongoose');
 const userRoute=require("./routes/user");
 const authRoute=require("./routes/auth");
@@ -26,7 +26,7 @@ app.listen(PORT, function(err){
     if (err) {
         console.log("Error in running the server", err);
     }
-    console.log('Yup!My Server is running on Port 8000');
+    console.log('Yup!My Server is running on Port 5000');
 })
 
 
