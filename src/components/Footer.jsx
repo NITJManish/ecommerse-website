@@ -134,13 +134,13 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <RoomIcon style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+          <RoomIcon style={{marginRight:"10px"}}/> jamshedpur jharkhand 832108
         </ContactItem>
         <ContactItem>
-          <PhoneIcon style={{marginRight:"10px"}}/> +1 234 56 78
+          <PhoneIcon style={{marginRight:"10px"}}/> +91 7424961745
         </ContactItem>
         <ContactItem>
-          <MailOutlineIcon style={{marginRight:"10px"}} /> contact@lama.dev
+          <MailOutlineIcon style={{marginRight:"10px"}} /> contact@RamEkbal.dev
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>

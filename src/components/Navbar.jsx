@@ -1,4 +1,5 @@
 // import { Badge } from "@material-ui/core";
+// import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import BadgeIcon from '@mui/icons-material/Badge';
 // import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import SearchIcon from '@mui/icons-material/Search';
@@ -6,6 +7,8 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -70,6 +73,7 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
+  const quantity = useSelector(state=>state.cart.quantity)
   return (
     <Container>
       <Wrapper>
@@ -81,16 +85,18 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>LAMA.</Logo>
+          <Logo>Ram Ekbal.</Logo>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
+          <Link to="/cart">
           <MenuItem>
-            <BadgeIcon badgeContent={4} color="primary">
+            <BadgeIcon badgeContent={quantity} color="primary">
               <ShoppingCartIcon />
             </BadgeIcon>
           </MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </Container>
